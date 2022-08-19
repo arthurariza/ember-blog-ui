@@ -12,7 +12,11 @@
     <span>{{@article.created_at}}</span>
 
     <p>
-      {{@article.full_text}}
+      {{#if @fullText}}
+        {{@article.full_text}}
+      {{else}}
+        {{@article.text}}
+      {{/if}}
     </p>
   </div>
 </div>
