@@ -1,0 +1,7 @@
+<h1>Latest Posts</h1>
+
+{{#each @model as |article|}}
+  <Article @article={{article}} />
+{{/each}}
+
+{{outlet}}
