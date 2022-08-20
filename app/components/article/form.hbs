@@ -1,11 +1,11 @@
-<form>
+<form {{on 'submit' this.createArticle}}>
   <div>
-    <label for='title'>Title</label>
-    <input type='text' name='title' />
+    <label for='title'>Title:</label>
+    <Input id='title' @type='text' @value={{this.title}} />
   </div>
   <div>
-    <label for='fullText'>Full Text</label>
-    <textarea type='textarea' name='fullText' rows='4' cols='50'></textarea>
+    <label for='full-text'>Full text:</label>
+    <Textarea id='full-textt' @value={{this.full_text}} rows='6' cols='80' />
   </div>
   <button type='submit'>Create Article</button>
 </form>
