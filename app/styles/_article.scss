@@ -1,0 +1,25 @@
+.article {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    // height: 150px;
+    // width: 100%;
+    // object-fit: fill;
+  }
+
+  &__body {
+    flex: 1;
+
+    .article__title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .article__created_at {
+      font-size: 0.75rem;
+      font-weight: 200;
+      color: $gray-300;
+    }
+  }
+}

@@ -1,4 +1,54 @@
+@import 'colors';
 @import 'variables';
 @import 'reset';
+@import 'article';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+.app {
+  display: flex;
+  height: 100vh;
+
+  .sidebar {
+    background-color: $gray-800;
+    width: 25%;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+
+    .sidebar__header {
+      color: $blue-500;
+      font-size: 2.5rem;
+      &--blog {
+        color: $yellow-300;
+      }
+    }
+
+    .sidebar__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .nav__link {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: $gray-400;
+
+        &:hover {
+          color: $gray-500;
+          border-bottom: 1px solid $gray-500;
+        }
+      }
+
+      .active {
+        border-bottom: 1px solid $gray-500;
+      }
+    }
+  }
+
+  .main {
+    flex: 1;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: auto;
+  }
+}

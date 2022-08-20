@@ -1,15 +1,14 @@
-<div>
-  <div>
+<div class='article'>
+  <div class='article__image'>
     <img src='/images/{{@article.image}}' alt='placeholder' />
   </div>
-  <div>
-    <h5>
+  <div class='article__body'>
+    <h5 class='article__title'>
       <LinkTo @route='articles.show' @model={{@article}}>
         {{@article.title}}
       </LinkTo>
-
     </h5>
-    <span>{{@article.created_at}}</span>
+    <span class='article__created_at'>{{@article.created_at}}</span>
 
     <p>
       {{#if @fullText}}

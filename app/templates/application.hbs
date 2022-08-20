@@ -1,12 +1,17 @@
 {{page-title 'BlogUi'}}
 
-<nav>
-  <ul>
-    <li><LinkTo @route='index'>Home</LinkTo></li>
-    <li><LinkTo @route='articles'>Articles</LinkTo></li>
-  </ul>
-</nav>
+<div class='app'>
+  <aside class='sidebar'>
+    <h1 class='sidebar__header'>
+      Ember<span class='sidebar__header--blog'>Blog</span>
+    </h1>
+    <nav class='sidebar__nav'>
+      <LinkTo @route='index' class='nav__link'>Home</LinkTo>
+      <LinkTo @route='articles' class='nav__link'>Articles</LinkTo>
+    </nav>
+  </aside>
 
-<h2 id='title'>Welcome to Ember</h2>
-
-{{outlet}}
+  <main class='main'>
+    {{outlet}}
+  </main>
+</div>
