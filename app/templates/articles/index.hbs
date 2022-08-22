@@ -1,7 +1,9 @@
 <h1>Latest Articles</h1>
 
-{{#each @model as |article|}}
-  <Article @article={{article}} />
-{{/each}}
+<div class='article-container'>
+  {{#each @model as |article index|}}
+    <Article @article={{article}} class={{if (eq index 0) 'article--lead'}} />
+  {{/each}}
+</div>
 
 {{outlet}}

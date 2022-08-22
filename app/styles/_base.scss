@@ -1,0 +1,19 @@
+%labels {
+  display: block;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+%inputs {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+label {
+  @extend %labels;
+}
+
+input,
+textarea {
+  @extend %inputs;
+}

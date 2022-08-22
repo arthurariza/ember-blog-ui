@@ -1,25 +1,53 @@
 .article {
   display: flex;
   flex-direction: column;
+  background-color: $white;
+  max-width: 350px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 1px 2px 2px rgb(0 0 0 / 10%);
 
   &__image {
-    // height: 150px;
-    // width: 100%;
-    // object-fit: fill;
+    height: 150px;
+    width: 100%;
+    object-fit: fill;
+
+    border-left: 0.5rem solid $blue-500;
   }
 
   &__body {
     flex: 1;
+    padding: 0.75rem;
 
     .article__title {
       font-size: 2rem;
       font-weight: 700;
     }
 
-    .article__created_at {
+    .article__created-at {
       font-size: 0.75rem;
       font-weight: 200;
-      color: $gray-300;
+      color: $gray-400;
     }
   }
+
+  &__form {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    background-color: $white;
+    box-shadow: 1px 2px 2px rgb(0 0 0 / 10%);
+  }
+
+  &:hover {
+    background-color: $gray-50;
+  }
+
+  &--lead {
+  }
+}
+
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }

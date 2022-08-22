@@ -1,0 +1,19 @@
+%button-primary {
+  padding: 0.5rem 1rem;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: $white;
+  background-color: $blue-500;
+
+  border-radius: 1rem;
+
+  &:hover {
+    background-color: $blue-600;
+  }
+}
+
+button[type='submit'] {
+  @extend %button-primary;
+}
